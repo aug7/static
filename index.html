@@ -1,139 +1,68 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"/>
-    <meta name="referrer" content="origin"/>
-    <title>哈啊哈</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i|Noto+Serif+TC&display=swap" rel="stylesheet">
-    <style type="text/css">
-      body{
-        margin: 0px;
-        border: 0px;
-        box-sizing: border-box;
-      }
-     
-       p{
-        margin: 0;
-        word-wrap:break-word; 
-         white-space: pre-wrap;
-        /*word-break:break-all;*/
-        font-size: 1.4em;
-        font-family: 'Lato','Noto Serif TC', serif;
-        color: white;
-        text-shadow: 0px 0px 6px white;
-        -webkit-user-select:none;
-       -moz-user-select:none;
-       -ms-user-select:none;
-       user-select:none;
-       } 
-       div.box{
-        box-sizing: border-box;
-        padding-top: 10%;
-        padding-bottom: 10%;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(to right bottom, #dc1767, #ac3086, #6f428f, #31457f, #003e60);
-        z-index: 1;
-       }
-       div.text{
-        padding-left: 5vw;
-        padding-right: 5vw;
-        overflow:auto;
-        height: 100%;
-       }
-#main {
-  box-sizing: border-box;
-        position: absolute;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-   padding: 2vw;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱你，菲菲。节日快乐！</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i|Noto+Serif+TC&display=swap" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 
-#main::before {
-   content: '';
-   position: absolute;
-   width: calc(100%);
-   height: calc(100%);
-   background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-   background-size: 400%;
-   animation: anim 15s linear infinite;
-}
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Long+Cang&display=swap');
 
-#main::after {
-   content: '';
-   position: absolute;
-   width: calc(100%);
-   height: calc(100%);
-   background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-   background-size: 400%;
-   animation: anim 15s linear infinite;
-   filter: blur(1rem);
-}
-       @keyframes anim {
-         from {background-position: 0}
-         to {background-position: 400%}
-      }
- 
-    </style>
+    body{
+      background: url('bg.jpg') no-repeat center center;
+      background-size:cover;
+      background-attachment:fixed;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    p{
+      color: white;
+      font-size: 42px;
+      user-select:none;
+      font-family: 'Long Cang', cursive;
+      text-shadow: 0 0 8px pink;
+    }
+    #main{
+      margin-top: 30%;
+      box-sizing: border-box;
+      position: absolute;
+      align-items: center;
+      vertical-align: center;
+      width: 100%;
+      padding: 2vw;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-
   <div id="main">
-      <div class="box">
-        <div class="text">
-          <p>TELL ME WHEN</p>
-          <p style="font-style: italic;">
-<br/>
-[Verse 1]
-How many hours must you wait
-Acting like you're a stranger
-To my ways?
-You don’t need to ask me 'bout my day
-I know what you came for
-It's okay
-<br/>
-[Chorus]
-Let me take you higher
-Than any place you’ve been
-We can start a fire
-You just tell me when
-You just tell me when
-<br/>
-[Verse 2]
-And I'm at a loss of words to say
-You're as bright as the summertime
-But you feel like the rain
-And all of my time has slipped away
-All I'm trying to do, babe
-Is make your day
-<br/>
-[Chorus]
-Let me take you higher
-Than any place you've been
-We can start a fire
-You just tell me when
-You just tell me when
-<br/>
-[Bridge]
-Baby, I swear
-I will be there for you
-Baby, I swear
-I will be there for you
-Baby, I swear
-I will be there for you
-Baby, I swear
-I will be there for you
-Baby, I swear
-          </p>
-
-        </div>
-      </div>
+    <p>爱你，菲菲</p>
+    <p>情人节快乐</p>
   </div>
+
 </body>
 </html>
+
+<script>
+
+  $(document).ready(function(){
+    setInterval(function(){
+      // 标题跑马灯
+      var title=document.title;
+      var arr=title.split("");
+      var e=arr.shift();
+      arr.push(e);
+      var marquee=arr.join("");
+      document.title=marquee;
+
+    },500);
+
+  });
+</script>
